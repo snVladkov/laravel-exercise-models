@@ -24,22 +24,6 @@
                 </div>
             </div>
 
-            @if (Session::has('success'))
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        swalNotify('success', '{{ Session::get('success') }}');
-                    });
-                </script>
-            @endif
-
-            @if (Session::has('error'))
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        swalNotify('error', '{{ Session::get('error') }}');
-                    });
-                </script>
-            @endif
-
             <!-- Contact Form -->
             <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm md:col-span-2">
                 <form action="{{ route('contacts.submit') }}" method="POST" class="space-y-5">

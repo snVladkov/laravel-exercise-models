@@ -14,6 +14,7 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
+        @include('partials.sweet_alert')
         {{ $slot }}
     </main>
 

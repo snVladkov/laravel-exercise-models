@@ -23,7 +23,7 @@
             @endempty
 
             @foreach ($categories as $category)
-                <x-category_card :icon="$category['icon']" :name="$category['name']" :count="$category['count']" />
+                <x-category_card :name="$category['name']" :count="$category['count']" />
             @endforeach
         </div>
     </section>

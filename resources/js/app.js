@@ -16,3 +16,21 @@ window.swalNotify = function (type, message) {
         }
     });
 }
+
+window.swalDeleteConfirm = function (event, message) {
+    event.preventDefault();
+    const form = event.target;
+    Swal.fire({
+        title: 'Are you sure?',
+        text: message,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            form.submit();
+        }
+    });
+}

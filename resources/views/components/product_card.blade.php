@@ -1,7 +1,7 @@
 <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
     <div>
         <div class="relative">
-            <img src="{{ $image }}" alt="{{ $name }}" class="w-full h-48 object-cover">
+            <img src="{{ $image }}" alt="{{ $name }}" class="w-full h-48 object-contain rounded-t-xl">
             <span class="absolute top-2 right-2 bg-slate-900 text-white text-xs px-2 py-1 rounded font-medium">
                 {{ $badge }}
             </span>

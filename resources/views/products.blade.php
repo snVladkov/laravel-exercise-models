@@ -13,13 +13,17 @@
         <!-- Product Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             @foreach ($products as $product)
-                <x-product_card 
-                    :name="$product['name']"
-                    :category="$product['category']"
-                    :price="$product['price']"
-                    :instock="$product['in_stock']"
-                    :badge="$product['badge']"
-                    :image="$product['image']"
+                <?php
+                    $inStock = $product->stock > 0;
+                    $badge = $inStock ? ($product->stock < 5 ? 'Low Stock' : 'In Stock') : 'Out of Stock';
+                ?>
+                <x-product_card
+                    :name="$product->name"
+                    :category="$product->category->name ?? 'Uncategorized'"
+                    :price="$product->price"
+                    :instock="$inStock"
+                    :badge="$badge"
+                    :image="$product->image_url ?? asset('images/placeholder.png')"
                 />
             @endforeach
         </div>

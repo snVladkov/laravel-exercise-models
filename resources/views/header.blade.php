@@ -14,6 +14,9 @@
             <a href="{{ route('contacts') }}" class="hover:text-blue-400 font-medium transition {{ Route::is('contacts') ? 'link-active' : '' }}">
                 Contacts
             </a>
+            <a href="{{ route('admin.dashboard') }}" class="hover:text-blue-400 font-medium transition {{ Route::is('admin.*') ? 'link-active' : '' }}">
+                Admin
+            </a>
         </nav>
 
         <div class="flex items-center gap-4">
