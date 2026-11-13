@@ -12,4 +12,8 @@
     .link-active {
         @apply text-blue-400 underline underline-offset-4;
     }
+
+    .error-message {
+        @apply text-red-500 text-sm mt-1;
+    }
 }

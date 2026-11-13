@@ -21,7 +21,7 @@
             @empty($categories)
                 <p class="text-gray-500 text-center col-span-full">No categories available at the moment.</p>
             @endempty
-            
+
             @foreach ($categories as $category)
                 <x-category_card :icon="$category['icon']" :name="$category['name']" :count="$category['count']" />
             @endforeach
